@@ -1,12 +1,27 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using ArsX.PublicPortal.Pages
+@inject NavigationManager NavigationManager
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
-        <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <p>Sorry, the page could not be found.</p>
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+    protected override void OnInitialized()
+    {
+        NavigationManager.NavigateTo("/home");
+    }
+
+    // [ArsX:Phase2Visual]
+    private void ConfigureRoutes()
+    {
+        // Add route for About page
+        // This is handled automatically by the Router component
+    }
+}

@@ -1,0 +1,9 @@
+/* Layout helpers */
+.section{ padding-block: var(--space-7); }
+.content{ width:min(calc(100% - 2*var(--space-6)), var(--maxw)); margin-inline:auto; }
+.stack > * + *{ margin-top: var(--space-4); }
+.cluster{ display:flex; flex-wrap:wrap; align-items:center; gap: var(--space-3); }
+.divider{ border-top: 1px solid var(--divider); margin-block: var(--space-7); }
+
+/* Optional: cards */
+.card{ padding: var(--space-5); border:1px solid var(--divider); border-radius: 0.75rem; }

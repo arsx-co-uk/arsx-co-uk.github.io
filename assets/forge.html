@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orbital Forge — Publishing Division of arsX Co-UK</title>
+  <meta name="description" content="Orbital Forge is the publishing imprint of arsX Co-UK. Dyslexia-friendly releases in EPUB/PDF with public mirrors." />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Orbital Forge — Publishing Division"/>
+  <meta property="og:description" content="Dyslexia-friendly releases, manifestos, and rulebooks."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://arsx-co-uk.github.io/forge.html"/>
+  <meta property="og:image" content="assets/cover-card.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div class="brand">
+        <h1>Orbital Forge</h1>
+        <p class="tagline">Publishing Division of arsX Co-UK</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="forge.html">Orbital Forge</a>
+        <a href="index.html#studios">Studios</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="breadcrumb"><a href="index.html">arsX Co-UK</a> › Orbital Forge</div>
+
+    <section class="panel hero">
+      <h2>Publishing for comprehension, not conformity.</h2>
+      <p>Orbital Forge is the imprint for all arsX publications. Our mandate: structure first, friction last — every release ships in accessible formats with open mirrors.</p>
+    </section>
+
+    <!-- Featured Title -->
+    <section class="panel">
+      <h2>Featured Release</h2>
+      <article class="card">
+        <div class="card-body">
+          <h3>The Dyslexic Reformation</h3>
+          <p class="meta">Author: <strong>Thomas Willis</strong> (arsX Initiative)</p>
+          <p>A human–AI manifesto on dyslexic cognition, reading architecture, and public accessibility.</p>
+          <div class="btn-row">
+            <a class="btn" href="downloads/The-Dyslexic-Reformation.epub" download>Download EPUB</a>
+            <a class="btn" href="downloads/The-Dyslexic-Reformation.pdf" download>Download PDF</a>
+            <a class="btn ghost" href="https://www.wattpad.com/user/CmdWillis" target="_blank" rel="noopener">Wattpad</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Roadmap / Imprint Notes -->
+    <section class="panel">
+      <h2>Imprint Notes</h2>
+      <ul class="bullets">
+        <li>Standard formats: EPUB 3 (reflow), PDF (print), with accessible typography.</li>
+        <li>Distribution: GitHub Releases + Internet Archive mirrors; select retailers as needed.</li>
+        <li>Licensing: <strong>CC BY 4.0</strong> unless otherwise stated.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> arsX Co-UK — Orbital Forge. Content under <a href="LICENSE">CC BY 4.0</a> unless stated.</small>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

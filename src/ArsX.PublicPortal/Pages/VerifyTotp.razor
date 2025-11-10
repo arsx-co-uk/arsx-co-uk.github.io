@@ -1,0 +1,48 @@
+@page "/verify-totp"
+
+<h3>Verify TOTP</h3>
+
+<div class="totp-verification">
+    <p>Enter the 6-digit code:</p>
+    <input type="text" maxlength="6" @bind="totpCode" class="totp-input" />
+    <button @onclick="VerifyCode" class="verify-button">Verify</button>
+    <p>@verificationMessage</p>
+</div>
+
+<style>
+    .totp-verification {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .totp-verification input {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .totp-verification button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+</style>
+
+@code {
+    private string totpCode = "";
+    private string verificationMessage = "";
+
+    private void VerifyCode()
+    {
+        if (totpCode.Length == 6 && int.TryParse(totpCode, out _))
+        {
+            // Simulate verification logic
+            verificationMessage = "Code verified successfully!";
+        }
+        else
+        {
+            verificationMessage = "Invalid code. Please try again.";
+        }
+    }
+}

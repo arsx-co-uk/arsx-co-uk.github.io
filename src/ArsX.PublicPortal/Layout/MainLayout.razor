@@ -1,16 +1,45 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<header class="top-nav">
+    <div class="brand-logo">ArsX</div>
+    <nav>
+        <a href="/home">ArsX</a> |
+        <a href="/forge">Orbital Forge</a> |
+        <a href="/skylab">Orbital SkyLab</a> |
+        <a href="/sat">Orbital Sat</a> |
+        <a href="/home">Home</a>
+    </nav>
+</header>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+<main>
+    @Body
+</main>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<style>
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    padding: 10px 20px;
+    color: var(--text-color);
+}
+
+.brand-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+</style>

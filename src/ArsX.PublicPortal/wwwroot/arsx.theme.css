@@ -1,0 +1,48 @@
+:root {
+  --primary-color: #1c1f26;
+  --accent-color: #b89bff;
+  --secondary-color: #ffffff;
+  --text-color: var(--secondary-color);
+  --background-color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1c1f26;
+    --text-color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffffff;
+    --text-color: #1c1f26;
+  }
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 100ms ease-in-out;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+@keyframes pressGlow {
+  0% {
+    box-shadow: 0 0 10px var(--accent-color);
+  }
+  100% {
+    box-shadow: 0 0 0 var(--accent-color);
+  }
+}
+
+button:active {
+  animation: pressGlow 100ms ease-in-out;
+}

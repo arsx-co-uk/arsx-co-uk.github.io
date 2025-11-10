@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArsX.PublicPortal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3af15afbf3f9aaebadc43579c45b3be0cddfe33")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArsX.PublicPortal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArsX.PublicPortal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

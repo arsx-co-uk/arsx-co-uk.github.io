@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>arsX Co-UK — Human & AI Co-Creation Group</title>
+  <meta name="description" content="arsX Co-UK is the parent organisation for Orbital Forge (publishing), Cyber Knights (studio), and Fractured Sol (simulation)."/>
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="arsX Co-UK — Human & AI Co-Creation Group"/>
+  <meta property="og:description" content="Parent hub for Orbital Forge publishing and arsX projects."/>
+  <meta property="og:url" content="https://arsx-co-uk.github.io/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="assets/cover-card.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div class="brand">
+        <h1>arsX <span class="thin">Co-UK</span></h1>
+        <p class="tagline">Human & AI Co-Creation Group</p>
+      </div>
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="forge.html">Orbital Forge</a>
+        <a href="#studios">Studios</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="panel hero">
+      <h2>We design systems. We publish clarity.</h2>
+      <p>arsX Co-UK coordinates divisions across publishing, game studios, and research. This hub is the canonical source for releases and updates.</p>
+      <div class="cta-row">
+        <a class="btn" href="forge.html">Enter Orbital Forge (Publishing)</a>
+        <a class="btn ghost" href="https://github.com/arsx-co-uk" target="_blank" rel="noopener">All repositories</a>
+      </div>
+    </section>
+
+    <!-- Divisions -->
+    <section id="divisions" class="panel">
+      <h2>Divisions</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Orbital Forge</h3>
+          <p><strong>Publishing imprint.</strong> Manifestos, essays, rulebooks, technical docs. Dyslexia-friendly formats.</p>
+          <p><a class="link" href="forge.html">Go to publishing ↗</a></p>
+        </article>
+
+        <article id="studios" class="card">
+          <h3>Cyber Knights</h3>
+          <p>Studio: retro-industrial futurism, UK-centric civic resilience skirmish (tabletop + digital).</p>
+          <p><a class="link" href="https://github.com/arsx-co-uk" target="_blank" rel="noopener">Index (incoming) ↗</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Fractured Sol</h3>
+          <p>Simulation division: hard-SF worldbuilding, comms architecture, logistics, factions.</p>
+          <p><a class="link" href="https://github.com/ThomasWillis4477/FracturedSol" target="_blank" rel="noopener">Repository ↗</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="panel">
+      <h2>Research & Initiatives</h2>
+      <ul class="bullets">
+        <li>Accessibility & typography for dyslexic readers</li>
+        <li>Human–AI co-authoring protocols and audit trails</li>
+        <li>Open distribution pipelines (EPUB 3, PDF, archival mirrors)</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:thomas.willis4477@yahoo.co.uk">thomas.willis4477@yahoo.co.uk</a></p>
+      <p>GitHub Org: <a href="https://github.com/arsx-co-uk" target="_blank" rel="noopener">github.com/arsx-co-uk</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> arsX Co-UK — Thomas Willis. Content under <a href="LICENSE">CC BY 4.0</a> unless stated.</small>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

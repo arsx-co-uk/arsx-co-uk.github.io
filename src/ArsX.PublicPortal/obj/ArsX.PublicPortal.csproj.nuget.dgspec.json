@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ArsX\\HQ\\ArsX.Public.Frontend\\arsx-co-uk.github.io-main\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj": {}
+    "e:\\ArsX\\HQ\\ArsX.Public.Frontend\\site\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj": {}
   },
   "projects": {
-    "E:\\ArsX\\HQ\\ArsX.Public.Frontend\\arsx-co-uk.github.io-main\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj": {
+    "e:\\ArsX\\HQ\\ArsX.Public.Frontend\\site\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ArsX\\HQ\\ArsX.Public.Frontend\\arsx-co-uk.github.io-main\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj",
+        "projectUniqueName": "e:\\ArsX\\HQ\\ArsX.Public.Frontend\\site\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj",
         "projectName": "ArsX.PublicPortal",
-        "projectPath": "E:\\ArsX\\HQ\\ArsX.Public.Frontend\\arsx-co-uk.github.io-main\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj",
+        "projectPath": "e:\\ArsX\\HQ\\ArsX.Public.Frontend\\site\\src\\ArsX.PublicPortal\\ArsX.PublicPortal.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\ArsX\\HQ\\ArsX.Public.Frontend\\arsx-co-uk.github.io-main\\src\\ArsX.PublicPortal\\obj\\",
+        "outputPath": "e:\\ArsX\\HQ\\ArsX.Public.Frontend\\site\\src\\ArsX.PublicPortal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "Microsoft.AspNetCore.StaticFiles": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",

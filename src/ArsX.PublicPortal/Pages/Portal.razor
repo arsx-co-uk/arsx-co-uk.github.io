@@ -1,0 +1,96 @@
+@page "/portal"
+<h2>Portal</h2>
+
+<!-- Copy ALL existing content from Home.razor before editing it -->
+<!-- Include project grid, user info, and descriptive sections -->
+
+<h3>Connect</h3>
+
+<div class="user-info">
+    <p>Welcome, <span id="user-name">Loading...</span></p>
+</div>
+
+<p>Your role: @userRole</p>
+
+<div class="role-cards">
+    @foreach (var card in roleCards)
+    {
+        <div class="card">
+            <h5>@card.Title</h5>
+            <p>@card.Description</p>
+        </div>
+    }
+</div>
+
+<h1>Projects</h1>
+<div class="project-grid">
+    @if (Projects == null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        foreach (var project in Projects)
+        {
+            <div class="project-card">
+                <h2>@project.name</h2>
+                <p><strong>Role:</strong> @project.role</p>
+                <p>@project.desc</p>
+            </div>
+        }
+    }
+</div>
+
+@inject ArsX.PublicPortal.Services.ApiClient ApiClient
+@inject IJSRuntime JSRuntime
+
+@code {
+    private string userName = "";
+    private string userRole = "Administrator";
+
+    private List<RoleCard> roleCards = new()
+    {
+        new RoleCard { Title = "Manage Users", Description = "Add, edit, or remove users." },
+        new RoleCard { Title = "View Reports", Description = "Access detailed analytics and reports." },
+        new RoleCard { Title = "Settings", Description = "Configure application settings." }
+    };
+
+    private class RoleCard
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+    }
+
+    private List<Project>? Projects;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            userName = await ApiClient.GetAsync<string>("/api/session/whoami") ?? "Unknown user";
+        }
+        catch (Exception ex)
+        {
+            userName = $"Error: {ex.Message}";
+        }
+
+        try
+        {
+            Projects = await JSRuntime.InvokeAsync<List<Project>>("window.__ARSX_API__.projects");
+        }
+        catch (Exception ex)
+        {
+            Projects = new List<Project>
+            {
+                new Project { name = "Error", role = "N/A", desc = ex.Message }
+            };
+        }
+    }
+
+    private class Project
+    {
+        public string name { get; set; } = string.Empty;
+        public string role { get; set; } = string.Empty;
+        public string desc { get; set; } = string.Empty;
+    }
+}

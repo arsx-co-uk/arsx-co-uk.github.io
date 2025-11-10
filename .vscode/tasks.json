@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run ArsX Public Portal",
+			"type": "shell",
+			"command": "dotnet run",
+			"args": [
+				"--project",
+				"src/ArsX.PublicPortal",
+				"--urls",
+				"http://localhost:5200"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
