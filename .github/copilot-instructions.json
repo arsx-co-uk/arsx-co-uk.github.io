@@ -1,0 +1,10 @@
+{
+  "purpose": "Guide Copilot behaviour for arsx-co-uk.github.io",
+  "rules": [
+    "Only modify HTML, CSS, or JS under Portal scope (L3/L4).",
+    "Never reference HQ or L5 systems.",
+    "Follow style conventions from styles.css.",
+    "All new files must include minimal header comments with date and author (Copilot/Thomas Willis).",
+    "When suggesting API calls, use https://api.arsx.co.uk endpoints only."
+  ]
+}
